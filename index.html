@@ -1,6 +1,162 @@
+<!DOCTYPE html>
 <html>
-<title>Hello World</title>
+<head>
+    <title>PureRGB</title>
+<!--     Apple Devices -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name = "viewport" content = "initial-scale = 1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<!--     General mobile apps -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="assets/icon_128.png">
+<!--     style sheets -->
+    <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.min.css" />
+    <link rel='stylesheet' href='css/main.css'>
+</head>
+
 <body>
-<h1>...hello world</h1>
+  <div class="container">
+
+
+    <!-- ---------------------------------------------------- -->
+    <!-- Menu System -->
+    <!-- ---------------------------------------------------- -->
+    <div class='row'>
+      <div class="navbar-header">
+      <!--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>-->
+	    <!--<a class="navbar-brand" href="#"><span class="glyphicon glyphicon-align-justify"></span></a>-->
+      </div>
+      <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+  		  <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">File </a>
+          <ul class="dropdown-menu">
+            <li>
+              <label class="myLabel">
+              <a href=""><input type="file" id="fileOpen" /></a>
+              <span>Open File</span>
+              </label>
+            </li>
+            <li><a href="#" id="reload">Reload <span class="keybSc">CMD/CTRL-R</span></a></li>
+            <li><a href="#">Save</a></li>
+            <li><a href="#">Save As</a></li>
+            <li><a href="#" id="close">Close Image<span class="keybSc">CMD/CTRL-Q</span></a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="close">Quit<span class="keybSc">CMD/CTRL-Q</span></a></li>
+  		    </ul>
+    	  </li>
+    	  <li class="dropdown">
+    	    <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Edit</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Cut <span class="keybSc">CMD/CTRL-X</span></a></li>
+              <li><a href="#">Copy <span class="keybSc">CMD/CTRL-C</span></a></li>
+              <li><a href="#">Paste <span class="keybSc">CMD/CTRL-V</span></a></li>
+      <!--        <li><a href="#">Next Image</a></li>-->
+      <!--        <li><a href="#">Previous Image</a></li>-->
+
+            <li class="divider"></li>
+            <li><a href="#" id="rotClk">Rotate Left <span class="keybSc">CMD/CTRL-[</span></a></li>
+            <li><a href="#" id="rotAclk">Rotate Right <span class="keybSc">CMD/CTRL-]</span></a></li>
+        </ul>
+	     </li>
+	      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">View</a>
+          <ul class="dropdown-menu">
+            <li><a href="#" id="z100">Zoom 100% <span class="keybSc">CMD/CTRL-1</span></a></li>
+            <li><a href="#" id="z200">Zoom 200% <span class="keybSc">CMD/CTRL-2</span></a></li>
+            <li><a href="#" id="z400">Zoom 400% <span class="keybSc">CMD/CTRL-3</span></a></li>
+            <li><a href="#" id="z800">Zoom 800% <span class="keybSc">CMD/CTRL-4</span></a></li>
+            <li><a href="#" id="zFull">Zoom Full <span class="keybSc">CMD/CTRL-F</span></a></li>
+            <li><a href="#" id="zCenter">Center Image</a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="nextFile">Image Tab Left <span class="keybSc"><span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></span></a></li>
+            <li><a href="#" id="nextFile">Image Tab Right <span class="keybSc"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span></span></a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="nextFile">Next File <span class="keybSc">PAGE-UP</span></a></li>
+            <li><a href="#" id="prevFile">Previous File<span class="keybSc">PAGE-UP</span></a></li>
+            <li><a href="#" id="firstFile">First File<span class="keybSc">HOME</span></a></li>
+            <li><a href="#" id="lastFile">Last File<span class="keybSc">END</span></a></li>
+          </ul>
+		    </li>
+		    <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Help</a>
+          <ul class="dropdown-menu">
+          <li><a href="#" id="showSupport">Support Forum</a></li>
+            <li><a href="#" id="showBug">Report a bug</a></li>
+            <li><a href="#" id="showSuggest">Suggest a feature</a></li>
+            <li class="divider"></li>
+            <li><a href="#" id="showAbout">About PureRGB</a></li>
+            <!--<li><a href="#">Company Details</a></li>-->
+            <li><a href="#" id="showVersion">Version & Credits</a></li>
+        </ul>
+		    </li>
+	    </ul>
+  </div>
+    </div>
+  </div>
+
+
+  <!-- ---------------------------------------------------- -->
+  <!-- Popup Dialog Boxes -->
+  <!-- ---------------------------------------------------- -->
+   <!-- <dialog id="support">
+    <p>SUPPORT DETAILS</p>
+    <button id="closeSupport">OK</button>
+  </dialog>
+  <dialog id="bug">
+    <p>Report a bug</p>
+    <button id="closeBug">OK</button>
+  </dialog>
+  <dialog id="suggest">
+    <p>Suggest a New Feature</p>
+    <button id="closeSuggest">OK</button>
+  </dialog>
+  <dialog id="version">
+    <p>Version: 0.0.2.2</p>
+    <button id="closeVersion">OK</button>
+  </dialog>
+  <dialog id="about">
+    <p>About RGB</p>
+    <button id="closeAbout">OK</button>
+  </dialog> -->
+
+  <!-- ----------------------------------------------------
+  <!-- Tabs -->
+  <!-- ---------------------------------------------------- -->
+  <div id="tabContainer">
+    <ul class="tabs" id="ulTabs">
+      <li draggable="true"><a href='#tab1' id="tab_1"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></a></li>
+    </ul>
+  </div>
+  <!-- ---------------------------------------------------- -->
+  <!-- Main content -->
+  <!-- ---------------------------------------------------- -->
+  <div id="canvasContainer">
+    <div id='tab1'>
+      <div class="container-mainStage">
+        <center><canvas id="canvas"/></center>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ---------------------------------------------------- -->
+  <!-- Footer/Status bar -->
+  <!-- ---------------------------------------------------- -->
+  <div id="statusBar">
+    <span id="fName">&nbsp;</span>
+    <span id="fSize">&nbsp;</span>
+    <span id="imgDim">&nbsp;</span>
+    <div id="mouseInfo">&nbsp;</div>
+  </div>
+
+  <!-- ---------------------------------------------------- -->
+  <!-- Scripts, etc -->
+  <!-- ---------------------------------------------------- -->
+  <script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/main.js"></script>
+  
+    <script src="bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+  
 </body>
 </html>

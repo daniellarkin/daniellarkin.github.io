@@ -1,0 +1,181 @@
+body {
+	background-color: #191517;
+	text-align: center;
+	padding: 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	overflow: hidden;
+}
+
+.container {
+  width: 100%;
+}
+
+.navbar-collapse {
+  padding-left: 0px;
+}
+.nav li a {
+    padding-top: 5px;
+    margin-top: 0px;
+    padding-bottom: 5px;
+    margin-top: 0px;
+}
+
+.container-mainStage {
+    border:0px solid #fff;
+}
+
+.footer {
+    background-color: #fff;
+}
+
+#mouseInfo {
+  float: right;
+  width: 600px;
+	text-align: left;
+}
+
+
+#fSize {
+  border-left: thick solid #bbb;
+  padding-left:10px;
+}
+
+#imgDim {
+  border-left: thick solid #bbb;
+  padding-left:10px;
+}
+
+#statusBar {
+  background-color: #ddd;
+  display: block;
+	text-align: left;
+	padding-left: 10px;
+	font-size: 14px;
+	vertical-align: text-bottom;
+}
+
+canvas {
+	margin-top:     0px;
+	margin-right:   0px;
+	margin-bottom:  0px;
+	margin-left:    0px;
+	border: 1px solid #eee;
+    overflow: auto;
+}
+
+.row {
+	background-color: #292527;
+}
+
+
+label.myLabel input[type="file"] {
+    position: fixed;
+    top: -1000px;
+}
+
+/***** Example custom styling *****/
+.myLabel {
+    padding: 2px 18px;
+    margin: 2px;
+//    display: inline-block;
+  cursor: pointer;
+}
+.myLabel:hover {
+    background: #EEE;
+    display: block;
+}
+
+dialog {
+  top:40%;
+  width: 400px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 3px 7px rgba(0, 0, 0, 0.3);
+  border-top: 5px solid #eb9816;
+}
+dialog button{
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  font-size: 1.9rem;
+  padding: 0.4rem 0.8em;
+  background: #eb9816;
+  border-bottom: 1px solid #f1b75c;
+  color: white;
+  font-weight: bold;
+  margin: 0 0.25rem;
+  text-align: center;
+}
+dialog button:hover, dialog button:focus {
+  opacity: 0.92;
+  cursor: pointer;
+}
+dialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.keybSc {
+  margin-left:12px;
+  text-align: right;
+  font-size: 75%;
+  font-weight: bold;
+  vertical-align: 10%;
+  //float: right;
+  //border: 5px solid #fff;
+}
+
+#tabContainer {
+  text-align: left;
+  font-size: small;
+  font-style: italic;
+  margin: 0px;
+}
+
+.tabs {
+	padding:       0px 0px;
+	margin-top:    5px;
+  margin-bottom: 0px;
+  margin-right:  0px;
+  margin-left:   4px;
+  font-size:     small;
+  font-style:    italic;
+}
+
+.tabs ul {
+  list-style:none;
+  padding-left:0px;
+  margin=0px;
+  -webkit-padding-start: 0px;
+}
+.tabs li {
+  list-style:none;
+	display:inline;
+	padding: 0px;
+	margin-right: 5px;
+}
+
+.tabs a {
+  padding:5px 10px;
+	display:inline-block;
+	background:#666;
+	color:#fff;
+	text-decoration:none;
+	margin-right: 0px;
+}
+
+.tabs a.active {
+	background:#eee;
+	color:#000;
+  margin: 0px;
+}
+
+
