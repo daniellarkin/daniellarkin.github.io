@@ -1,13 +1,13 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>PureRGB · Image comparison</title>  <script type="module" crossorigin src="./assets/index-BzCoc7LM.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DgHAhya2.css">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title>  <script type="module" crossorigin src="./assets/index-Y4bBuPbD.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-B8DCUqEe.css">
 </head>
 <body>
 <main>
   <header>
-    <div class="brand"><span class="mark" aria-hidden="true">◧</span><strong>PureRGB</strong><span class="badge">EARLY PREVIEW</span></div>
-    <span class="local">Your images stay on this device</span>
+    <div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>PureRGB</strong><span class="badge">EARLY PREVIEW</span></div>
+    <span class="local"><span aria-hidden="true">●</span> Local &amp; private</span>
   </header>
   <section class="toolbar" aria-label="Image controls">
     <button id="open" class="primary">Open images…</button>
@@ -20,27 +20,27 @@
     <details id="display-menu" class="popover">
       <summary>Display range</summary>
       <form id="range-form" class="panel">
-        <strong>Shared display range</strong><p>Applies to every image tab.</p>
+        <button type="button" class="panel-close" aria-label="Close display range">×</button><strong>Shared display range</strong><p>Applies to every image tab.</p>
         <label>Minimum <input id="min" type="number" step="any" value="0" required></label>
         <label>Maximum <input id="max" type="number" step="any" value="255" required></label>
         <button id="apply" type="submit" data-image-control>Apply range</button>
       </form>
     </details>
     <span id="range-status" class="range-status">—</span>
-    <details class="popover help"><summary aria-label="Keyboard shortcuts">?</summary><div class="panel"><strong>Navigation</strong><p>Early preview: desktop comparison workflow. Mobile pinch support and device validation are still in development.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p></div></details>
+    <details class="popover help"><summary aria-label="Keyboard shortcuts">?</summary><div class="panel"><button type="button" class="panel-close" aria-label="Close navigation help">×</button><strong>Make every pixel count.</strong><p>Drag with one finger to pan. Pinch with two fingers to zoom. Tap a tab to compare. Physical-device validation is still in progress.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p></div></details>
   </section>
   <nav class="tabbar" aria-label="Image tabs"><div id="tabs" role="tablist" aria-label="Open images"></div><button id="add" aria-label="Open more images" title="Open more images">+</button></nav>
   <section class="image-label"><span id="name">No image selected</span><span id="dimensions"></span></section>
-  <div id="stage">
+  <div id="stage" role="tabpanel">
     <canvas id="canvas" tabindex="0" aria-label="Image preview"></canvas>
-    <section id="empty" class="overlay"><div class="empty-mark" aria-hidden="true">◧</div><h1>See what changed.</h1><p>Open image variants. Explore a detail.<br>Switch tabs without losing your place.</p><button id="empty-open" class="primary">Choose images…</button><button id="samples" class="quiet">Try sample variants</button><small>JPEG · PNG · TIFF · PPM · PGM</small></section>
+    <section id="empty" class="overlay"><div class="empty-mark" aria-hidden="true"><span></span><span></span><span></span></div><h1>See what changed.</h1><p>One detail. Every variation.<br>Compare your images, perfectly in place.</p><button id="empty-open" class="primary">Choose images…</button><button id="samples" class="quiet">Try sample variants</button><small>JPEG · PNG · TIFF · PPM · PGM</small><span class="privacy-note">Your images stay on this device.</span></section>
     <section id="loading" class="overlay" hidden><span class="spinner" aria-hidden="true"></span><p id="loading-text">Opening image…</p></section>
     <section id="failed" class="overlay" hidden><h2>Couldn’t open this image</h2><p id="file-error"></p><button id="retry">Try again</button></section>
   </div>
   <footer>
     <span id="status" role="status">Open images to begin</span>
     <form id="position" aria-label="Center coordinates"><label>X <input id="center-x" type="number" step="any" aria-label="Center X" required data-image-control></label><label>Y <input id="center-y" type="number" step="any" aria-label="Center Y" required data-image-control></label><button type="submit" data-image-control>Go</button></form>
-    <span class="sampling">Nearest neighbor</span><output id="zoom-status">—</output>
+    <span class="sampling">Nearest neighbor</span><output id="zoom-status" aria-label="Current zoom">—</output>
   </footer>
   <p id="error" role="alert"></p><p id="warning"></p>
 </main>
