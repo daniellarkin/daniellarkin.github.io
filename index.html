@@ -1,22 +1,25 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title>  <script type="module" crossorigin src="./assets/index-Y4bBuPbD.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B8DCUqEe.css">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title><meta name="theme-color" content="#23252a"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="PureRGB"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">  <script type="module" crossorigin src="./assets/index-DcPVbsQ2.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DkKTSYZ0.css">
 </head>
 <body>
 <main>
   <header>
-    <div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><strong>PureRGB</strong><span class="badge">EARLY PREVIEW</span></div>
-    <span class="local"><span aria-hidden="true">●</span> Local &amp; private</span>
+    <div class="brand"><span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><div class="brand-title"><strong>PureRGB</strong><span>Image comparison workspace</span></div><span class="badge">EARLY PREVIEW</span></div>
+    <button id="analysis-toggle" class="analysis-toggle" aria-controls="inspector" aria-expanded="false">Image info <span aria-hidden="true">◧</span></button><span class="local"><span aria-hidden="true">●</span> Local &amp; private</span>
   </header>
+  <div id="workspace" class="workspace"><div class="viewer-column">
   <section class="toolbar" aria-label="Image controls">
     <button id="open" class="primary">Open images…</button>
-    <input id="file" type="file" accept=".jpg,.jpeg,.png,.tif,.tiff,.ppm,.pgm" multiple hidden>
-    <div class="divider"></div>
+    <input id="file" type="file" accept=".jpg,.jpeg,.png,.bmp,.tif,.tiff,.ppm,.pgm" multiple hidden>
+    <div class="tool-group zoom-tools" aria-label="Magnification"><button id="zoom-out" class="icon-button" aria-label="Zoom out" title="Zoom out (−)" data-image-control>−</button>
     <button id="fit" data-image-control>Fit</button>
     <select id="zoom" aria-label="Zoom" data-image-control>
       <option value="current" disabled>Fit</option><option value=".25">25%</option><option value=".5">50%</option><option value="1">100%</option><option value="2">200%</option><option value="4">400%</option><option value="8">800%</option><option value="16">1600%</option>
     </select>
+    <button id="zoom-in" class="icon-button" aria-label="Zoom in" title="Zoom in (+)" data-image-control>+</button></div>
+    <div class="tool-group range-tools">
     <details id="display-menu" class="popover">
       <summary>Display range</summary>
       <form id="range-form" class="panel">
@@ -26,22 +29,51 @@
         <button id="apply" type="submit" data-image-control>Apply range</button>
       </form>
     </details>
-    <span id="range-status" class="range-status">—</span>
-    <details class="popover help"><summary aria-label="Keyboard shortcuts">?</summary><div class="panel"><button type="button" class="panel-close" aria-label="Close navigation help">×</button><strong>Make every pixel count.</strong><p>Drag with one finger to pan. Pinch with two fingers to zoom. Tap a tab to compare. Physical-device validation is still in progress.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p></div></details>
+    <span id="range-status" class="range-status">—</span></div>
+    <span class="linked"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 12 4-4M7 13l-1 1a3 3 0 0 1-4-4l4-4a3 3 0 0 1 4 0m0 8a3 3 0 0 0 4 0l4-4a3 3 0 0 0-4-4l-1 1"/></svg>Shared view</span>
+    <details class="popover help"><summary aria-label="Keyboard shortcuts">?</summary><div class="panel"><button type="button" class="panel-close" aria-label="Close navigation help">×</button><strong>Install &amp; use offline</strong><p>iPhone/iPad: in Safari, choose Share → Add to Home Screen, with Open as Web App enabled. Android: use the browser menu → Install app or Add to Home screen.</p><p id="offline-status" role="status">Preparing offline use…</p><p>Open once online and wait for offline readiness. Launch from the Home Screen without browser tabs. System status indicators may remain. Only the app is cached; cloud-only files need downloading first. Clearing site data removes offline access.</p><strong>Make every pixel count.</strong><p>Drag with one finger to pan. Pinch with two fingers to zoom. Tap a tab to compare. Physical-device validation is still in progress.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p><section id="image-notes" hidden><strong>Selected image notes</strong><p id="warning"></p></section></div></details>
   </section>
   <nav class="tabbar" aria-label="Image tabs"><div id="tabs" role="tablist" aria-label="Open images"></div><button id="add" aria-label="Open more images" title="Open more images">+</button></nav>
-  <section class="image-label"><span id="name">No image selected</span><span id="dimensions"></span></section>
+  <section class="image-label"><div class="image-identity"><span class="eyebrow">VIEWING</span><span id="name">No image selected</span></div><span id="dimensions"></span><div class="compare-controls"><button id="previous" aria-label="Previous image" title="Previous image (Option/Alt + ←)" data-image-control>‹</button><button id="next" aria-label="Next image" title="Next image (Option/Alt + →)" data-image-control>›</button></div></section>
   <div id="stage" role="tabpanel">
     <canvas id="canvas" tabindex="0" aria-label="Image preview"></canvas>
-    <section id="empty" class="overlay"><div class="empty-mark" aria-hidden="true"><span></span><span></span><span></span></div><h1>See what changed.</h1><p>One detail. Every variation.<br>Compare your images, perfectly in place.</p><button id="empty-open" class="primary">Choose images…</button><button id="samples" class="quiet">Try sample variants</button><small>JPEG · PNG · TIFF · PPM · PGM</small><span class="privacy-note">Your images stay on this device.</span></section>
+    <section id="empty" class="overlay"><div class="welcome">
+      <div class="welcome-art" aria-hidden="true"><div class="art-card art-back"><span>01</span><i></i></div><div class="art-card art-front"><span>02</span><i></i></div><div class="art-crosshair"></div></div>
+      <span class="eyebrow">A CLOSER LOOK</span><h1>Every pixel.<br>Every difference.</h1><p>Open your variants. Find a detail.<br>Switch images without losing your place.</p>
+      <div class="welcome-actions"><button id="empty-open" class="primary">Choose images…</button><button id="samples" class="quiet">Try sample variants <span aria-hidden="true">↗</span></button></div>
+      <small>JPEG · PNG · BMP · TIFF · PPM · PGM</small><span class="privacy-note">Local files. Original samples. Nothing uploaded.</span>
+      </div><div class="welcome-guide"><span><b>01</b> Open variants</span><span><b>02</b> Zoom into a detail</span><span><b>03</b> Switch to compare</span></div></section>
     <section id="loading" class="overlay" hidden><span class="spinner" aria-hidden="true"></span><p id="loading-text">Opening image…</p></section>
     <section id="failed" class="overlay" hidden><h2>Couldn’t open this image</h2><p id="file-error"></p><button id="retry">Try again</button></section>
   </div>
+
   <footer>
     <span id="status" role="status">Open images to begin</span>
     <form id="position" aria-label="Center coordinates"><label>X <input id="center-x" type="number" step="any" aria-label="Center X" required data-image-control></label><label>Y <input id="center-y" type="number" step="any" aria-label="Center Y" required data-image-control></label><button type="submit" data-image-control>Go</button></form>
-    <span class="sampling">Nearest neighbor</span><output id="zoom-status" aria-label="Current zoom">—</output>
+    <span class="sampling" title="Nearest-neighbor sampling at every zoom level">Nearest neighbor</span><output id="zoom-status" aria-label="Current zoom">—</output>
   </footer>
-  <p id="error" role="alert"></p><p id="warning"></p>
-</main>
+  <p id="error" role="alert"></p>
+</div>
+  <aside id="inspector" class="inspector" aria-label="Image analysis" aria-hidden="true" inert>
+    <div class="inspector-content">
+      <div class="inspector-heading"><div><span class="eyebrow">ORIGINAL SAMPLES</span><h2>Image info</h2></div><button id="analysis-close" aria-label="Close image info">×</button></div>
+      <p id="analysis-name" class="analysis-name">No image selected</p><p id="analysis-meta" class="analysis-meta"></p>
+      <p id="analysis-empty" role="status">Open an image to inspect its samples.</p>
+      <div id="analysis-results" hidden>
+        <section class="analysis-section"><h3>Histogram</h3>
+          <fieldset class="histogram-channels"><legend class="sr-only">Visible histogram channels</legend>
+          <label class="channel-r"><input type="checkbox" data-channel="r" checked>R</label><label class="channel-g"><input type="checkbox" data-channel="g" checked>G</label><label class="channel-b"><input type="checkbox" data-channel="b" checked>B</label><label class="channel-y"><input type="checkbox" data-channel="y" checked>Luminance</label></fieldset>
+          <svg id="histogram" viewBox="0 0 280 150" role="img" aria-label="Original-sample histogram"><title>Original-sample histogram</title><path class="histogram-grid" d="M0 25H280M0 75H280M0 125H280"/><path data-histogram="r" class="channel-r"/><path data-histogram="g" class="channel-g"/><path data-histogram="b" class="channel-b"/><path data-histogram="y" class="channel-y"/></svg>
+          <div class="histogram-axis"><span>0</span><span id="histogram-max"></span></div><p id="histogram-scale" class="analysis-note"></p>
+        </section>
+        <section class="analysis-section"><h3>Black &amp; white pixels</h3><table class="endpoint-table"><thead><tr><th>Channel</th><th>Black</th><th>White</th></tr></thead><tbody>
+          <tr><th id="endpoint-label-r" class="channel-r">R</th><td id="black-r"></td><td id="white-r"></td></tr><tr data-rgb-row><th class="channel-g">G</th><td id="black-g"></td><td id="white-g"></td></tr><tr data-rgb-row><th class="channel-b">B</th><td id="black-b"></td><td id="white-b"></td></tr>
+        <tr data-rgb-row><th class="channel-y">Luminance</th><td id="black-y"></td><td id="white-y"></td></tr></tbody></table><p id="endpoint-range" class="analysis-note"></p></section>
+        <section class="analysis-section"><h3>Channel ratios</h3><dl class="ratio-grid"><div><dt>R / G</dt><dd id="ratio-rg"></dd></div><div><dt>B / G</dt><dd id="ratio-bg"></dd></div></dl><p id="ratio-note" class="analysis-note"></p></section>
+        <section id="camera-section" class="analysis-section" hidden><h3>Camera</h3><dl id="camera-fields" class="camera-fields"></dl><p class="analysis-note">Embedded EXIF · supplied by the file</p></section>
+        <p class="analysis-note analysis-method">Whole image · 256 histogram bins. Luminance: 0.2126R + 0.7152G + 0.0722B, using original samples without gamma correction. Alpha is ignored, including transparent pixels. Display range, zoom and pan do not change these statistics.</p>
+      </div>
+    </div>
+  </aside>
+</div></main>
 </body></html>

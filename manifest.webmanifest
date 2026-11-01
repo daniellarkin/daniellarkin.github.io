@@ -1,0 +1,29 @@
+{
+  "id": "./",
+  "name": "PureRGB \u2014 Image comparison",
+  "short_name": "PureRGB",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": [
+    "fullscreen",
+    "standalone"
+  ],
+  "background_color": "#111215",
+  "theme_color": "#23252a",
+  "description": "Compare local image variants, online or offline.",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

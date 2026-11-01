@@ -1,10 +1,10 @@
 {
-  "source_commit": "6d07e56eb40b5070d1e31bc7639bcac5507987a9",
+  "source_commit": "abdbf0d33c4bfb4c5e3955ac184ed346fd58c099",
   "source_branch": "main",
   "validation_conclusion": "success",
-  "validation_run": 41303818711,
-  "artifact_id": 13082440965,
-  "artifact_digest": "sha256:64740be5eafe385ba97b4a45e2017a62db3118e4e76d5b59482d372180fb7384",
+  "validation_run": 41312460384,
+  "artifact_id": 13086371715,
+  "artifact_digest": "sha256:89d6b3c25d908660f0c5cba9f616dfb1090c44f7028556af206b51702d8798fa",
   "release_kind": "early-preview",
   "files": [
     {
@@ -13,19 +13,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "assets/index-B8DCUqEe.css",
-      "bytes": 9885,
-      "sha256": "54e65d85480e7ca21a055c43a5bfbdda8516f233b7c148c62ffafb9db92f3c46"
+      "path": "assets/index-DcPVbsQ2.js",
+      "bytes": 20351,
+      "sha256": "eb920a9822de0579caecfc8fdc84cf5e7c3af48f6dcc3785368be5cbd0a30f43"
     },
     {
-      "path": "assets/index-Y4bBuPbD.js",
-      "bytes": 14837,
-      "sha256": "c4999b371aeddb3bc79f185c62ba5c323c86657a64a4ee3495d33d9a79cadbc9"
+      "path": "assets/index-DkKTSYZ0.css",
+      "bytes": 19566,
+      "sha256": "9cd429fbc4f40ecb81dcc6f2c0bbcc8457a6c4c73086c880b371863b47c95846"
     },
     {
-      "path": "assets/worker-Bhnqoivl.js",
-      "bytes": 67347,
-      "sha256": "68ab4151768d1abff80e90bc73c3826a89851b793cfb094e854f4d9dc4ab810f"
+      "path": "assets/worker-BwB8lH-u.js",
+      "bytes": 72152,
+      "sha256": "e92c025987aa271f94fa93c02935c1d694ac29021ad56bdffaf6fc788c16de63"
     },
     {
       "path": "CNAME",
@@ -33,9 +33,34 @@
       "sha256": "6102fd03159e2a0ce3e04df138b69010284b638c317a68a7c9fa49677cef9dc9"
     },
     {
+      "path": "icons/apple-touch-icon.png",
+      "bytes": 615,
+      "sha256": "5b59d89b62f6421591590b3319b80c9ce14bbad499deeb7ac7215e3de5d4b8ef"
+    },
+    {
+      "path": "icons/icon-192.png",
+      "bytes": 756,
+      "sha256": "05495c9e359ca0159111db730db334f8522aeaeb8339c4f92da987e102a306c2"
+    },
+    {
+      "path": "icons/icon-512.png",
+      "bytes": 3616,
+      "sha256": "dc0299ba50e6fa99f443633a6ecdfc0527f64c18046314ff7472aa8c188dcd99"
+    },
+    {
       "path": "index.html",
-      "bytes": 4469,
-      "sha256": "a0412b503bff41757740660adad07403328a63da2fd408d407943478b02f06ea"
+      "bytes": 10270,
+      "sha256": "1fadf698ce5c0dc07210d3aead65f2f8e47d909b4fe9b58f4db352d5adf22cf2"
+    },
+    {
+      "path": "manifest.webmanifest",
+      "bytes": 631,
+      "sha256": "db707a8c8427ae44723e47ab426148d955075cb036038adbd2da9f0c02f8740b"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 2339,
+      "sha256": "80e3b32cb8a969e880d777507011a5f7115b492cb4230d6075652f93a1001d8e"
     },
     {
       "path": "third-party/fast-png-LICENSE.txt",
