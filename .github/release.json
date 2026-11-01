@@ -1,10 +1,10 @@
 {
-  "source_commit": "b14b5e4d5fed2cd0d38b7a744c4ee42608378839",
+  "source_commit": "37d344bfc06fb802c47ece34f0330e2e49b580af",
   "source_branch": "main",
   "validation_conclusion": "success",
-  "validation_run": 41354210469,
-  "artifact_id": 13102862549,
-  "artifact_digest": "sha256:8937dac89e10f9fc9e0c78f01f2d0dec848889b90558c8d4810a0f33fbb89e68",
+  "validation_run": 41359258891,
+  "artifact_id": 13105130036,
+  "artifact_digest": "sha256:5336c4bdd742420d7ad6a79060d1129ee24516f65a2472b5d9ef5ffae86804e7",
   "release_kind": "early-preview",
   "files": [
     {
@@ -13,14 +13,14 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
+      "path": "assets/index-C8PufYWR.js",
+      "bytes": 47199,
+      "sha256": "cf68a70221748a008756c14aa59018b2868f0e2068ee2e3c04c2e723e335e440"
+    },
+    {
       "path": "assets/index-CTPD0o9V.css",
       "bytes": 28909,
       "sha256": "c1ebb9507a3cdb01829589f93ea803ff4cbd5fd51164ce5717e8cf090fd2d8ce"
-    },
-    {
-      "path": "assets/index-Czx_SvJA.js",
-      "bytes": 47188,
-      "sha256": "72d31aeb556b98bc3c43ae658f74fd3b530212d25bfa848bb0877a24877901db"
     },
     {
       "path": "assets/worker-BwB8lH-u.js",
@@ -50,7 +50,7 @@
     {
       "path": "index.html",
       "bytes": 13839,
-      "sha256": "29b830f57f73b283eb7320966a90a5b0b56cec92b3043f3cac306cefbd37312a"
+      "sha256": "7be3e5467568b49538a793a94b8280cbe07c9a6242adafe77ef32ed6f6adf05e"
     },
     {
       "path": "manifest.webmanifest",
@@ -60,7 +60,7 @@
     {
       "path": "sw.js",
       "bytes": 2339,
-      "sha256": "ed38db757c3ee56dbe430564831722fd9d06858fe7bc9ea5ca5b148b1a07ce5d"
+      "sha256": "0279ec736b6314f1673fc27a1b118d0e6625ab8945f08d02b540a4a765fb84a7"
     },
     {
       "path": "third-party/fast-png-LICENSE.txt",
