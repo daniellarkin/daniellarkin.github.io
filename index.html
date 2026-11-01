@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title><meta name="theme-color" content="#23252a"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="PureRGB"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">  <script type="module" crossorigin src="./assets/index-BWaIBLXb.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-BaeHXbCP.css">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title><meta name="theme-color" content="#23252a"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="PureRGB"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">  <script type="module" crossorigin src="./assets/index-DFzwU05b.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-CYEa6NWp.css">
 </head>
 <body>
 <main>
@@ -37,8 +37,8 @@
     <span class="linked"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m8 12 4-4M7 13l-1 1a3 3 0 0 1-4-4l4-4a3 3 0 0 1 4 0m0 8a3 3 0 0 0 4 0l4-4a3 3 0 0 0-4-4l-1 1"/></svg>Shared view</span>
     <details class="popover help"><summary aria-label="Keyboard shortcuts">?</summary><div class="panel"><button type="button" class="panel-close" aria-label="Close navigation help">×</button><strong>Install &amp; use offline</strong><p>iPhone/iPad: in Safari, choose Share → Add to Home Screen, with Open as Web App enabled. Android: use the browser menu → Install app or Add to Home screen.</p><p id="offline-status" role="status">Preparing offline use…</p><p>Open once online and wait for offline readiness. Launch from the Home Screen without browser tabs. System status indicators may remain. Only the app is cached; cloud-only files need downloading first. Clearing site data removes offline access.</p><strong>Make every pixel count.</strong><p>Drag with one finger to pan. Pinch with two fingers to zoom. Tap a tab to compare. Physical-device validation is still in progress.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Desktop ROI tool: click two corners to measure a region. Hold Space and drag to pan. Arrows and Enter select pixels; Escape cancels an unfinished region. Rename regions and expand/collapse their statistics in Image info. Normal cursor clears every ROI.</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p><section id="image-notes" hidden><strong>Selected image notes</strong><p id="warning"></p></section></div></details>
   </section>
-  <nav class="tabbar" aria-label="Image tabs"><div id="tabs" role="tablist" aria-label="Open images"></div><button id="add" aria-label="Open more images" title="Open more images">+</button></nav>
-  <section class="image-label"><div class="image-identity"><span class="eyebrow">VIEWING</span><span id="name">No image selected</span></div><span id="dimensions"></span><div class="compare-controls"><button id="previous" aria-label="Previous image" title="Previous image (Option/Alt + ←)" data-image-control>‹</button><button id="next" aria-label="Next image" title="Next image (Option/Alt + →)" data-image-control>›</button></div></section>
+  <nav class="tabbar" aria-label="Image tabs"><div id="tabs" role="tablist" aria-label="Open images"></div><button id="add" aria-label="Open more images" title="Open more images">+</button><div class="compare-controls"><button id="previous" aria-label="Previous image" title="Previous image (Option/Alt + ←)" data-image-control>‹</button><button id="next" aria-label="Next image" title="Next image (Option/Alt + →)" data-image-control>›</button></div></nav>
+  <div class="viewport-frame">
   <div id="stage" role="tabpanel">
     <canvas id="canvas" tabindex="0" aria-label="Image preview"></canvas>
     <svg id="roi-overlay" class="roi-overlay" aria-hidden="true"></svg>
@@ -52,6 +52,7 @@
     <section id="loading" class="overlay" hidden><span class="spinner" aria-hidden="true"></span><p id="loading-text">Opening image…</p></section>
     <section id="failed" class="overlay" hidden><h2>Couldn’t open this image</h2><p id="file-error"></p><button id="retry">Try again</button></section>
   </div>
+  </div>
 
   <footer>
     <span id="status" role="status">Open images to begin</span>
@@ -64,6 +65,7 @@
     <div class="inspector-content">
       <div class="inspector-heading"><div><span class="eyebrow">ORIGINAL SAMPLES</span><h2>Image info</h2></div><button id="analysis-close" aria-label="Close image info">×</button></div>
       <p id="analysis-name" class="analysis-name">No image selected</p><p id="analysis-meta" class="analysis-meta"></p>
+      <details id="camera-section" class="analysis-section camera-section" open hidden><summary>Camera</summary><dl id="camera-fields" class="camera-fields"></dl><p class="analysis-note">Embedded EXIF · supplied by the file</p></details>
       <p id="analysis-empty" role="status">Open an image to inspect its samples.</p>
       <section id="roi-section" class="analysis-section roi-section" hidden>
         <div class="roi-section-heading"><button id="roi-section-toggle" aria-expanded="true" aria-controls="roi-cards">ROI information (<span id="roi-count">0</span>)</button></div>
@@ -82,7 +84,6 @@
           <tr><th id="endpoint-label-r" class="channel-r">R</th><td id="black-r"></td><td id="white-r"></td></tr><tr data-rgb-row><th class="channel-g">G</th><td id="black-g"></td><td id="white-g"></td></tr><tr data-rgb-row><th class="channel-b">B</th><td id="black-b"></td><td id="white-b"></td></tr>
         <tr data-rgb-row><th class="channel-y">Luminance</th><td id="black-y"></td><td id="white-y"></td></tr></tbody></table><p id="endpoint-range" class="analysis-note"></p></section>
         <section class="analysis-section"><h3>Channel ratios</h3><dl class="ratio-grid"><div><dt>R / G</dt><dd id="ratio-rg"></dd></div><div><dt>B / G</dt><dd id="ratio-bg"></dd></div></dl><p id="ratio-note" class="analysis-note"></p></section>
-        <section id="camera-section" class="analysis-section" hidden><h3>Camera</h3><dl id="camera-fields" class="camera-fields"></dl><p class="analysis-note">Embedded EXIF · supplied by the file</p></section>
         <p class="analysis-note analysis-method">Whole image · 256 histogram bins. Luminance: 0.2126R + 0.7152G + 0.0722B, using original samples without gamma correction. Alpha is ignored, including transparent pixels. Display range, zoom and pan do not change these statistics.</p>
       </div>
     </div>
