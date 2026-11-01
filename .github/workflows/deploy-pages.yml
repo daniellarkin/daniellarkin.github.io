@@ -1,0 +1,59 @@
+name: Deploy production manually
+on:
+  workflow_dispatch:
+    inputs:
+      source_commit:
+        description: 'Tested private-source commit recorded in .github/release.json'
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: production-pages
+  cancel-in-progress: false
+jobs:
+  package:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+      - name: Verify promoted files against the tested artifact manifest
+        env:
+          EXPECTED_SOURCE: ${{ inputs.source_commit }}
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,os,pathlib,shutil
+          root=pathlib.Path('.')
+          record=json.loads((root/'.github/release.json').read_text())
+          assert record['source_commit']==os.environ['EXPECTED_SOURCE'], 'Wrong source commit'
+          assert record['validation_conclusion']=='success', 'Release lacks passing validation'
+          assert record['source_branch']=='main', 'Only validated main releases are allowed'
+          out=root/'_site';out.mkdir()
+          for item in record['files']:
+              p=pathlib.PurePosixPath(item['path'])
+              assert not p.is_absolute() and '..' not in p.parts and p.parts[0] not in ['.git','.github'], 'Invalid artifact path'
+              source=root/p
+              assert source.is_file() and not source.is_symlink(), 'Missing or unsafe artifact'
+              data=source.read_bytes()
+              assert hashlib.sha256(data).hexdigest()==item['sha256'], f'Changed artifact: {p}'
+              dest=out/p;dest.parent.mkdir(parents=True,exist_ok=True);dest.write_bytes(data)
+          assert (out/'index.html').is_file()
+          assert (out/'CNAME').read_text().strip()=='purergb.com'
+          PY
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site/
+  deploy:
+    needs: package
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

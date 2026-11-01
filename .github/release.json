@@ -1,0 +1,71 @@
+{
+  "source_commit": "4fcda124877c0c138858af74528a0575946502ca",
+  "source_branch": "main",
+  "validation_conclusion": "success",
+  "validation_run": 41299400942,
+  "artifact_id": 13080732324,
+  "artifact_digest": "sha256:d63542044d08079e35306275907e8c083dd353b5e4bab4f11fd6ee354e2e94c5",
+  "release_kind": "early-preview",
+  "files": [
+    {
+      "path": ".nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "assets/index-BzCoc7LM.js",
+      "bytes": 13092,
+      "sha256": "8ea9f4f2327ef20f3d2bb448490ff3c438d6eb3d4aa316fd2fecbe1ebe75232c"
+    },
+    {
+      "path": "assets/index-DgHAhya2.css",
+      "bytes": 5131,
+      "sha256": "971c073f6e62228d8a2071c62238bad93fe1fd95e600dbc7f2505cad75d6d90e"
+    },
+    {
+      "path": "assets/worker-Bhnqoivl.js",
+      "bytes": 67347,
+      "sha256": "68ab4151768d1abff80e90bc73c3826a89851b793cfb094e854f4d9dc4ab810f"
+    },
+    {
+      "path": "CNAME",
+      "bytes": 12,
+      "sha256": "6102fd03159e2a0ce3e04df138b69010284b638c317a68a7c9fa49677cef9dc9"
+    },
+    {
+      "path": "index.html",
+      "bytes": 4066,
+      "sha256": "bfe0a3228b3d7c8af5cc7be85328b7b8067d03a8cea50f77ac58ff7452bfa732"
+    },
+    {
+      "path": "third-party/fast-png-LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "47ec9747cf2c470a505fcb20f3ec2ff2e60ea4febaf2e1e7041a24fc369fac3c"
+    },
+    {
+      "path": "third-party/fflate-LICENSE.txt",
+      "bytes": 1070,
+      "sha256": "766daa9b2ab0ab2698c769f334a6d72c42437b0a7d0d0dfd5c13c64b3120117b"
+    },
+    {
+      "path": "third-party/iobuffer-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bd1c70786d165cc05faa10569e13905318f5a75a0281d960038231521148d082"
+    },
+    {
+      "path": "third-party/jpeg-js-attribution.md",
+      "bytes": 2652,
+      "sha256": "0e648fd81a792cfada2be559a3eceb49253ed629e7ca8af1fe7538ecedf2ceb7"
+    },
+    {
+      "path": "third-party/jpeg-js-LICENSE.txt",
+      "bytes": 1436,
+      "sha256": "8aa50650686b74f5ad73392b6db2a120982329dfb378b4464b57d6d72ce3a70c"
+    },
+    {
+      "path": "third-party/tiff-LICENSE.txt",
+      "bytes": 1081,
+      "sha256": "bd1c70786d165cc05faa10569e13905318f5a75a0281d960038231521148d082"
+    }
+  ]
+}
