@@ -1,28 +1,28 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title><meta name="theme-color" content="#23252a"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="PureRGB"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">  <script type="module" crossorigin src="./assets/index-C8PufYWR.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-CTPD0o9V.css">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>PureRGB · Image comparison</title><meta name="theme-color" content="#23252a"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="PureRGB"><link rel="manifest" href="./manifest.webmanifest"><link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">  <script type="module" crossorigin src="./assets/index-om7K9AW5.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-sdITTeVj.css">
 </head>
 <body>
 <main>
 <header>
     <span class="mark" aria-hidden="true"><i></i><i></i><i></i></span><strong class="brand-name">PureRGB</strong>
     <nav id="app-menu" class="app-menu" aria-label="Application menu">
-      <details class="popover" id="file-menu"><summary>File</summary><div class="panel menu-panel"><button id="open">Open images…</button><span class="menu-note">Local files · nothing uploaded</span></div></details>
+      <details class="popover" id="file-menu"><summary>File</summary><div class="panel menu-panel"><button id="open">Open images…</button><button disabled>Save as…</button><button disabled>Exit</button><span class="menu-note">Local files · nothing uploaded</span></div></details>
+      <details class="popover" id="edit-menu"><summary>Edit</summary><div class="panel menu-panel"><button disabled>Cut / Crop</button><button disabled>Copy</button><span class="menu-note">Coming later</span></div></details>
       <details class="popover" id="view-menu"><summary>View</summary><div class="panel menu-panel"><button id="view-navigator" class="desktop-control" aria-pressed="false">Navigator</button><button id="view-inspector" class="desktop-control" aria-pressed="false">Inspector</button><button id="display-action">Display range</button></div></details>
-      <details class="popover help"><summary aria-label="Help">Help</summary><div class="panel"><button type="button" id="help-close" class="panel-close" aria-label="Close navigation help">×</button><strong>Install &amp; use offline</strong><p>iPhone/iPad: in Safari, choose Share → Add to Home Screen, with Open as Web App enabled. Android: use the browser menu → Install app or Add to Home screen.</p><p id="offline-status" role="status">Preparing offline use…</p><p>Open once online and wait for offline readiness. Launch from the Home Screen without browser tabs. System status indicators may remain. Only the app is cached; cloud-only files need downloading first. Clearing site data removes offline access.</p><strong>Make every pixel count.</strong><p>Drag with one finger to pan. Pinch with two fingers to zoom. Tap a tab to compare. Physical-device validation is still in progress.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Desktop ROI tool: click two corners to measure a region. Hold Space and drag to pan. Arrows and Enter select pixels; Escape cancels an unfinished region. Rename regions and expand/collapse their statistics in the Regions inspector. Normal cursor clears every ROI.</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p><section id="image-notes" hidden><strong>Selected image notes</strong><p id="warning"></p></section></div></details>
+      <details class="popover help"><summary aria-label="Help">Help</summary><div class="panel"><button type="button" id="help-close" class="panel-close" aria-label="Close navigation help">×</button><strong>Make every pixel count.</strong><p>Drag with one finger to pan. Pinch with two fingers to zoom. Tap a tab to compare. Physical-device validation is still in progress.</p><p>Drag to pan · Wheel to zoom</p><p>Arrows: 1 pixel · Shift + arrows: 10 pixels</p><p>Desktop ROI tool: click two corners to measure a region. Hold Space and drag to pan. Arrows and Enter select pixels; Escape cancels an unfinished region. Rename regions and expand/collapse their statistics in the Regions inspector. Normal cursor keeps your regions. Use Remove all ROIs to clear them. Variance divides by N (population variance); variance is in squared original-sample units.</p><p>Option/Alt + ←/→: switch tabs</p><p>Option/Alt + 1–9: choose tab</p><p>+ / −: zoom · F: fit</p><p>Range mapping preserves original samples. Embedded color profiles and gamma corrections are not applied.</p><strong>Install &amp; use offline</strong><p>iPhone/iPad: in Safari, choose Share → Add to Home Screen, with Open as Web App enabled. Android: use the browser menu → Install app or Add to Home screen.</p><p id="offline-status" role="status">Preparing offline use…</p><p>Open once online and wait for offline readiness. Launch from the Home Screen without browser tabs. System status indicators may remain. Only the app is cached; cloud-only files need downloading first. Clearing site data removes offline access.</p><section id="image-notes" hidden><strong>Selected image notes</strong><p id="warning"></p></section></div></details>
     </nav>
-    <div class="panel-toggles"><button id="navigator-toggle" class="desktop-control" aria-controls="navigator" aria-expanded="false">Navigator</button><button id="analysis-toggle" class="desktop-control" aria-controls="inspector" aria-expanded="false">Inspector</button></div>
+
     <span class="badge">EARLY PREVIEW</span>
   </header><input id="file" type="file" accept=".jpg,.jpeg,.png,.bmp,.tif,.tiff,.ppm,.pgm" multiple hidden>
-<div id="workspace" class="workspace"><aside id="navigator" class="navigator" aria-label="Image navigator" aria-hidden="true" inert>
-    <div class="navigator-content"><div class="inspector-heading"><h2>Navigator</h2><button id="navigator-close" aria-label="Close navigator">×</button></div>
-    <p id="navigator-name" class="analysis-name">No image selected</p>
+<div id="workspace" class="workspace"><button id="navigator-toggle" class="pane-handle navigator-handle desktop-control" aria-label="Expand navigator" aria-controls="navigator" aria-expanded="false"><span aria-hidden="true">»</span></button><button id="analysis-toggle" class="pane-handle inspector-handle desktop-control" aria-label="Expand inspector" aria-controls="inspector" aria-expanded="false"><span aria-hidden="true">«</span></button><aside id="navigator" class="navigator" aria-label="Image navigator" aria-hidden="true" inert>
+    <div class="navigator-content"><div class="inspector-heading"><h2>Navigator</h2><button id="navigator-close" aria-label="Collapse navigator"><span aria-hidden="true">«</span></button></div>
     <div class="navigator-map"><canvas id="navigator-canvas" width="1" height="1" tabindex="0" aria-label="Image navigator; arrow keys pan, Shift moves ten pixels"></canvas><svg id="navigator-window" hidden aria-hidden="true"><rect id="navigator-outline"/></svg></div>
     <p id="navigator-state" class="analysis-note">Open an image to navigate.</p>
-    <p class="analysis-note">Overview uses the shared display range. Zoom and position stay linked across image tabs.</p></div>
+    <p class="analysis-note">Overview uses the shared display range. Zoom and position stay linked where image bounds allow.</p></div>
   </aside><div class="viewer-column"><nav class="tabbar" aria-label="Image tabs"><div id="tabs" role="tablist" aria-label="Open images"></div><button id="add" aria-label="Open more images" title="Open more images">+</button><div id="roi-tools" class="tool-group roi-tools" role="group" aria-label="Image pointer tool" hidden>
-      <button id="normal-tool" class="icon-button" aria-label="Normal cursor" aria-pressed="true" title="Normal cursor — clears all ROIs"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 2 12 9-6 1-3 6Z"/></svg></button>
+      <button id="normal-tool" class="icon-button" aria-label="Normal cursor" aria-pressed="true" title="Normal cursor — keeps ROIs"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="m4 2 12 9-6 1-3 6Z"/></svg></button>
       <button id="roi-tool" class="icon-button" aria-label="ROI tool" aria-pressed="false" title="ROI tool — click two corners"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M10 1v5m0 8v5M1 10h5m8 0h5M5 5h10v10H5Z"/></svg></button>
     </div><div class="compare-controls"><button id="previous" aria-label="Previous image" title="Previous image (Option/Alt + ←)" data-image-control>‹</button><button id="next" aria-label="Next image" title="Next image (Option/Alt + →)" data-image-control>›</button></div></nav><div class="viewport-frame">
   <div id="stage" role="tabpanel">
@@ -40,7 +40,7 @@
   </div>
   </div>
 </div><aside id="inspector" class="inspector" aria-label="Image inspector" aria-hidden="true" inert><div class="inspector-content">
-    <div class="inspector-heading"><h2>Inspector</h2><button id="analysis-close" aria-label="Close inspector">×</button></div>
+    <div class="inspector-heading"><h2>Inspector</h2><button id="analysis-close" aria-label="Collapse inspector"><span aria-hidden="true">»</span></button></div>
     <p id="analysis-name" class="analysis-name">No image selected</p><p id="analysis-meta" class="analysis-meta"></p>
     <div class="inspector-sections" role="tablist" aria-label="Inspector sections">
       <button id="inspector-image" role="tab" aria-controls="inspector-image-panel" aria-selected="true">Image</button>
@@ -62,9 +62,9 @@
       </div></section>
     <section id="inspector-regions-panel" role="tabpanel" aria-labelledby="inspector-regions" hidden><p id="regions-empty" class="analysis-note">Use the ROI tool to select a region.</p><section id="roi-section" class="analysis-section roi-section" hidden>
         <div class="roi-section-heading"><button id="roi-section-toggle" aria-expanded="true" aria-controls="roi-cards">ROI information (<span id="roi-count">0</span>)</button></div>
-        <div class="roi-bulk"><button id="roi-expand-all">Expand all</button><button id="roi-collapse-all">Collapse all</button></div>
+        <div class="roi-bulk"><button id="roi-expand-all">Expand all</button><button id="roi-collapse-all">Collapse all</button><button id="roi-remove-all">Remove all ROIs</button></div>
         <div id="roi-cards"></div>
-        <p id="roi-method" class="analysis-note">Original samples · Luma = 0.2126R + 0.7152G + 0.0722B, without gamma correction. Alpha is ignored. Select Normal cursor to clear all regions.</p>
+        <p id="roi-method" class="analysis-note">Original samples · Luma = 0.2126R + 0.7152G + 0.0722B, without gamma correction. Alpha is ignored. Normal cursor keeps regions. Remove all ROIs clears them.</p>
       </section></section>
     <section id="inspector-display-panel" role="tabpanel" aria-labelledby="inspector-display" hidden><div id="desktop-range-host"><form id="range-form">
         <strong>Shared display range</strong><p>Applies to every image tab.</p>
@@ -75,14 +75,12 @@
   </div></aside></div><footer>
     <span id="status" role="status">Open images to begin</span>
     <div class="tool-group zoom-tools" aria-label="Magnification"><button id="zoom-out" class="icon-button" aria-label="Zoom out" title="Zoom out (−)" data-image-control>−</button>
-    <button id="fit" data-image-control>Fit</button>
-    <button id="actual-size" data-image-control>100%</button>
-    <select id="zoom" aria-label="Zoom" data-image-control>
-      <option value="current" disabled>Fit</option><option value=".25">25%</option><option value=".5">50%</option><option value="1">100%</option><option value="2">200%</option><option value="4">400%</option><option value="8">800%</option><option value="16">1600%</option>
-    </select>
+    <form id="zoom-form" class="zoom-picker"><label for="zoom">Zoom</label><div class="zoom-entry"><input id="zoom" type="text" inputmode="decimal" role="combobox" aria-label="Zoom" aria-autocomplete="none" aria-controls="zoom-presets" aria-expanded="false" autocomplete="off" data-image-control><span aria-hidden="true">%</span><button id="zoom-presets-toggle" type="button" aria-label="Zoom presets" aria-controls="zoom-presets" aria-expanded="false" data-image-control>⌄</button></div><div id="zoom-presets" role="listbox" aria-label="Zoom presets" hidden>
+      <button type="button" role="option" data-zoom="fit" id="fit">Fit</button><button type="button" role="option" data-zoom=".25">25%</button><button type="button" role="option" data-zoom=".5">50%</button><button type="button" role="option" data-zoom="1" id="actual-size">100%</button><button type="button" role="option" data-zoom="2">200%</button><button type="button" role="option" data-zoom="4">400%</button><button type="button" role="option" data-zoom="8">800%</button><button type="button" role="option" data-zoom="16">1600%</button>
+    </div></form>
     <button id="zoom-in" class="icon-button" aria-label="Zoom in" title="Zoom in (+)" data-image-control>+</button></div>
     <form id="position" aria-label="Center coordinates"><label>X <input id="center-x" type="number" step="any" aria-label="Center X" required data-image-control></label><label>Y <input id="center-y" type="number" step="any" aria-label="Center Y" required data-image-control></label><button type="submit" data-image-control>Go</button></form>
-    <span class="sampling" title="Nearest-neighbor sampling at every zoom level">Nearest neighbor</span><output id="zoom-status" aria-label="Current zoom">—</output>
+    <span class="sampling" title="Nearest-neighbor sampling at every zoom level">Nearest neighbor</span><output id="zoom-status" class="sr-only" aria-label="Current zoom">—</output>
   </footer><p id="error" role="alert"></p><output id="range-status" class="sr-only">—</output></main>
 <dialog id="display-dialog" aria-label="Shared display range"><button id="display-close" aria-label="Close display range">×</button><div id="mobile-range-host"></div></dialog>
 </body></html>
