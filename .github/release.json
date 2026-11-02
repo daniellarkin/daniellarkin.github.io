@@ -1,10 +1,10 @@
 {
-  "source_commit": "21b7e23fb501c7af6a419063c2398db17ef63e76",
+  "source_commit": "69bbba4cade3783e5b80130da0a5cfb8686d5a6c",
   "source_branch": "main",
   "validation_conclusion": "success",
-  "validation_run": 41458134637,
-  "artifact_id": 13147854253,
-  "artifact_digest": "sha256:96abfa509ecd25ae10746fda4fe28bb0eabe2d4a223102e8d96a19fe7aaefe62",
+  "validation_run": 41538516057,
+  "artifact_id": 13186246321,
+  "artifact_digest": "sha256:6a41d200618b6e4c6d6d380af14c067f6e304b12346c2caf79096d72d5bfd112",
   "release_kind": "early-preview",
   "files": [
     {
@@ -13,19 +13,24 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "assets/index-CB3tYiXI.js",
-      "bytes": 57354,
-      "sha256": "26899981aa2638cfa6d6779889b7172faf978094488add1f5e787d79ab437c2d"
+      "path": "assets/index-C-2lVh1U.css",
+      "bytes": 33277,
+      "sha256": "790b0d74bb3e6bc4c4d0b75b273d6897fa8bc8e0badd5423d46babd329e1bbc0"
     },
     {
-      "path": "assets/index-DURgIKXl.css",
-      "bytes": 31456,
-      "sha256": "adfa3014860283d2dc91612f797cc8b499960ee9c4814e57c5ed7e5028bb48ed"
+      "path": "assets/index-SF68UdHW.js",
+      "bytes": 72824,
+      "sha256": "749c7710bda74affaabe95c4fe12e5c91b78c36b29fd0aeb9660767682e41d26"
     },
     {
-      "path": "assets/worker-C9dnHMBM.js",
-      "bytes": 74830,
-      "sha256": "3152453212b4b6732d0bb4c8f63ac7b7f4cf4b8957c66e88ae1850f50e7f1ceb"
+      "path": "assets/libraw-IP__XGtL.wasm",
+      "bytes": 853083,
+      "sha256": "c4cb97a7e4372da41a1ff6ec6e1146f38deb125b733b8bbb2e9c52727953aba8"
+    },
+    {
+      "path": "assets/worker-CZLW8RvF.js",
+      "bytes": 159578,
+      "sha256": "a216cb406072f4a6b2d92f37dcee177bdd0e790d1a7e1bc7aa0a69009b7b55f6"
     },
     {
       "path": "CNAME",
@@ -49,8 +54,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 17563,
-      "sha256": "45ced339007fa68a10952de9571df01d4019ac00d0d6662eb6dd0b70bb22f409"
+      "bytes": 22885,
+      "sha256": "9152c9da848ee42a2d588f76bc5bf6e643207170aae097e4adbc000caf6f6af3"
     },
     {
       "path": "manifest.webmanifest",
@@ -59,8 +64,8 @@
     },
     {
       "path": "sw.js",
-      "bytes": 2339,
-      "sha256": "d60655103f2df25ce60377aead4d46daa75782943556fc76f7bca428511629c1"
+      "bytes": 2438,
+      "sha256": "034af11eea048e8e724e187412e298ce55bf2c652e777c62a73e56173c298b72"
     },
     {
       "path": "third-party/fast-png-LICENSE.txt",
@@ -88,9 +93,34 @@
       "sha256": "8aa50650686b74f5ad73392b6db2a120982329dfb378b4464b57d6d72ce3a70c"
     },
     {
+      "path": "third-party/LibRaw-COPYRIGHT.txt",
+      "bytes": 1153,
+      "sha256": "574c88f5dd59414cfc896293a63defbc2d525a418ed413d7ab7dcc43cf79c509"
+    },
+    {
+      "path": "third-party/LibRaw-LICENSE-CDDL.txt",
+      "bytes": 16906,
+      "sha256": "0e3098d2d54a12434715f6679ea408d57da5e8d613c385c58ecc6fe5d30cc81f"
+    },
+    {
+      "path": "third-party/LibRaw-source.md",
+      "bytes": 1183,
+      "sha256": "a67011e95b22c6e519f2a2b394706fcccb4dbbe32c92b514e67be85fe399ae31"
+    },
+    {
+      "path": "third-party/libraw-wasm-LICENSE.txt",
+      "bytes": 1072,
+      "sha256": "bc69b25118733fc9a795fbffe4065a246ddc5a3c375e8db0819e7637754f8a24"
+    },
+    {
       "path": "third-party/tiff-LICENSE.txt",
       "bytes": 1081,
       "sha256": "bd1c70786d165cc05faa10569e13905318f5a75a0281d960038231521148d082"
+    },
+    {
+      "path": "third-party/typed-cstruct-LICENSE.txt",
+      "bytes": 1072,
+      "sha256": "914b8d9734fb02518c2b80ae3b2fabf1df7f63bce5ccc09ff4dd1296fbe5c4d3"
     }
   ]
 }
