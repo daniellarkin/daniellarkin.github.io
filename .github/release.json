@@ -1,10 +1,10 @@
 {
-  "source_commit": "197250f08fc57920f067c222e7f8323609629319",
+  "source_commit": "21b7e23fb501c7af6a419063c2398db17ef63e76",
   "source_branch": "main",
   "validation_conclusion": "success",
-  "validation_run": 41433143622,
-  "artifact_id": 13134854305,
-  "artifact_digest": "sha256:de08e1419237ed96f9a84579477e8ef71f84b2d9c048f3fd6e65e5da0a985e9b",
+  "validation_run": 41458134637,
+  "artifact_id": 13147854253,
+  "artifact_digest": "sha256:96abfa509ecd25ae10746fda4fe28bb0eabe2d4a223102e8d96a19fe7aaefe62",
   "release_kind": "early-preview",
   "files": [
     {
@@ -13,19 +13,19 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "assets/index-om7K9AW5.js",
-      "bytes": 50384,
-      "sha256": "d25b66fdc4db7e3ed58546771fabf2b9e77993761f2fe425568ac8ca7f4c6a1c"
+      "path": "assets/index-CB3tYiXI.js",
+      "bytes": 57354,
+      "sha256": "26899981aa2638cfa6d6779889b7172faf978094488add1f5e787d79ab437c2d"
     },
     {
-      "path": "assets/index-sdITTeVj.css",
-      "bytes": 30037,
-      "sha256": "651b9f707f28d05e702420b77cfc106f290d8aa0f96d93bebc23e475d9d710f1"
+      "path": "assets/index-DURgIKXl.css",
+      "bytes": 31456,
+      "sha256": "adfa3014860283d2dc91612f797cc8b499960ee9c4814e57c5ed7e5028bb48ed"
     },
     {
-      "path": "assets/worker-BwB8lH-u.js",
-      "bytes": 72152,
-      "sha256": "e92c025987aa271f94fa93c02935c1d694ac29021ad56bdffaf6fc788c16de63"
+      "path": "assets/worker-C9dnHMBM.js",
+      "bytes": 74830,
+      "sha256": "3152453212b4b6732d0bb4c8f63ac7b7f4cf4b8957c66e88ae1850f50e7f1ceb"
     },
     {
       "path": "CNAME",
@@ -49,8 +49,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 15133,
-      "sha256": "5019f7c3ff5311eb505176b93f77c14d22cd300abf4d711f23f4a0b49135455f"
+      "bytes": 17563,
+      "sha256": "45ced339007fa68a10952de9571df01d4019ac00d0d6662eb6dd0b70bb22f409"
     },
     {
       "path": "manifest.webmanifest",
@@ -60,7 +60,7 @@
     {
       "path": "sw.js",
       "bytes": 2339,
-      "sha256": "0e8af509123a4e8364285b7f66246878d05e654f63e7e75558ed61ce8f6aceaf"
+      "sha256": "d60655103f2df25ce60377aead4d46daa75782943556fc76f7bca428511629c1"
     },
     {
       "path": "third-party/fast-png-LICENSE.txt",
