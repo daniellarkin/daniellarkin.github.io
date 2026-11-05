@@ -1,10 +1,10 @@
 {
-  "source_commit": "36c20e5bd5b1d39de99dd824e2fa13bc9fa17898",
+  "source_commit": "51412876c90a74e7b9cd7198ea73e589959593e3",
   "source_branch": "main",
   "validation_conclusion": "success",
-  "validation_run": 41725530123,
-  "artifact_id": 13275925395,
-  "artifact_digest": "sha256:7f395b49ea0ee45e2cba7e381b375140da0f8d9f813360ae9e22f47d29f0e271",
+  "validation_run": 41985115077,
+  "artifact_id": 13396935114,
+  "artifact_digest": "sha256:c40501fed1a663cd20c30e8a9ca4996516fee4dde6b8373df7133704ada3c9b0",
   "release_kind": "early-preview",
   "files": [
     {
@@ -13,9 +13,9 @@
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
-      "path": "assets/index-P81I0u7N.js",
-      "bytes": 72824,
-      "sha256": "749c7710bda74affaabe95c4fe12e5c91b78c36b29fd0aeb9660767682e41d26"
+      "path": "assets/index-CLiTKZdO.js",
+      "bytes": 74663,
+      "sha256": "83c98595eebe99d0d73f357baef02c9dd50c4be6328173695455c6ecbaf6a64f"
     },
     {
       "path": "assets/index-SbMuTJYt.css",
@@ -54,8 +54,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 22885,
-      "sha256": "f58ade5c81bbe501e272017692fd653a82e003d8654eec78bfeb7153caca71d9"
+      "bytes": 23810,
+      "sha256": "b44ed21458c785660f67e81d79df455fbd56e93d7fc54b025d87cd50e9fa3fe8"
     },
     {
       "path": "manifest.webmanifest",
@@ -65,7 +65,7 @@
     {
       "path": "sw.js",
       "bytes": 2438,
-      "sha256": "21f8f99a0e5e7b44ad7850bc1f5a47e7a7ec2b9cf1c0dbeaa6e12daf45b5464a"
+      "sha256": "20b93f11adad95df41fbc521b6efdd89df66042488b4c924b05e18ab53aca0db"
     },
     {
       "path": "third-party/fast-png-LICENSE.txt",
